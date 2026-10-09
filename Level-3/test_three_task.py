@@ -5,6 +5,7 @@
 from task_three import generate_invoice
 import pytest
 
+
 def test_gen_invoice():
     assert generate_invoice("""Bread x 2 - £3.60
 Milk x 1 - £0.80

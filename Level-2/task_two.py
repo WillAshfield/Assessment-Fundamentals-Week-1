@@ -7,16 +7,17 @@ basket = []
 
 
 def add_to_basket(item: dict) -> list:
+    """Add an item to the basket."""
     basket.append(item)
     return basket
 
 
 def generate_receipt(basket: list) -> str:
+    """Generate a receipt from the basket."""
     if not basket:
         return "Basket is empty"
 
     # Generate the receipt string
-
     item_count = {}
 
     for item in basket:
@@ -62,8 +63,8 @@ if __name__ == "__main__":
         "name": "Butter",
         "price": 1.20
     })
-    receipt = generate_receipt(basket)
+    finished_receipt = generate_receipt(basket)
 
     print("```")
-    print(receipt)
+    print(finished_receipt)
     print("```")

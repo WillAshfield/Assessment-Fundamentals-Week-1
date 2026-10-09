@@ -8,18 +8,18 @@ basket = []
 
 
 def add_to_basket(item: dict) -> list:
+    """Add an item to the basket."""
     basket.append(item)
     return basket
 
 
 def generate_receipt(basket: list) -> str:
+    """Generate a receipt from the basket."""
 
     if not basket:
         return "Basket is empty"
 
     # Generate the receipt string
-    print("```")
-
     receipt = ""
     total = 0
 
@@ -29,9 +29,8 @@ def generate_receipt(basket: list) -> str:
         else:
             receipt += f"{item['name']} - £{item['price']:.2f}\n"
             total += item['price']
-    else:
-        receipt += f"Total: £{total:.2f}"
-    print("```")
+
+    receipt += f"Total: £{total:.2f}"
 
     return receipt  # return the receipt string
 
@@ -49,4 +48,7 @@ if __name__ == "__main__":
         "name": "Butter",
         "price": 1.20
     })
-    print(generate_receipt(basket))
+    finished_receipt = generate_receipt(basket)
+    print("```")
+    print(finished_receipt)
+    print("```")
