@@ -12,25 +12,35 @@ def add_to_basket(item: dict) -> list:
 
 
 def generate_receipt(basket: list) -> str:
-
     if not basket:
         return "Basket is empty"
 
     # Generate the receipt string
-    print("```")
+
+    item_count = {}
+
+    for item in basket:
+        # Check if the item has already been seen with counts
+        key = (item['name'], item['price'])
+
+        if key in item_count:
+            item_count[key] += 1
+        else:
+            item_count[key] = 1
 
     receipt = ""
     total = 0
 
-    for item in basket:
-        if item['price'] == 0:
-            receipt += f"{item['name']} - Free\n"
-        else:
-            receipt += f"{item['name']} - £{item['price']:.2f}\n"
-            total += item['price']
-    else:
-        receipt += f"Total: £{total:.2f}"
-    print("```")
+    for (name, price), quantity in item_count.items():
+        item_total = price * quantity
+        total += item_total
+
+        name_formatted = f"{name} x {quantity}"
+        price_formatted = "Free" if item_total == 0 else f"£{item_total:.2f}"
+
+        receipt += f"{name_formatted} - {price_formatted}\n"
+
+    receipt += f"Total: £{total:.2f}"
 
     return receipt  # return the receipt string
 
@@ -52,4 +62,8 @@ if __name__ == "__main__":
         "name": "Butter",
         "price": 1.20
     })
-    print(generate_receipt(basket))
+    receipt = generate_receipt(basket)
+
+    print("```")
+    print(receipt)
+    print("```")
