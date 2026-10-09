@@ -6,24 +6,16 @@ collected 27 items
 
 Level-1/test_one_task.py .............                                   [ 48%]
 Level-2/test_two_task.py .......                                         [ 74%]
-Level-3/test_three_task.py FFFFFFF                                       [100%]
+Level-3/test_three_task.py .......                                       [100%]
 
-========================= 7 failed, 20 passed in 0.10s =========================
+============================== 27 passed in 0.08s ==============================
 ************* Module task_one
-Level-1/task_one.py:10:0: C0116: Missing function or method docstring (missing-function-docstring)
-Level-1/task_one.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
-Level-1/task_one.py:15:21: W0621: Redefining name 'basket' from outer scope (line 7) (redefined-outer-name)
-Level-1/task_one.py:32:4: W0120: Else clause on loop without a break statement, remove the else and de-indent all the code inside it (useless-else-on-loop)
+Level-1/task_one.py:16:21: W0621: Redefining name 'basket' from outer scope (line 7) (redefined-outer-name)
 ************* Module task_two
-Level-2/task_two.py:9:0: C0116: Missing function or method docstring (missing-function-docstring)
-Level-2/task_two.py:14:0: C0116: Missing function or method docstring (missing-function-docstring)
-Level-2/task_two.py:14:21: W0621: Redefining name 'basket' from outer scope (line 6) (redefined-outer-name)
-Level-2/task_two.py:31:4: W0621: Redefining name 'receipt' from outer scope (line 65) (redefined-outer-name)
+Level-2/task_two.py:15:21: W0621: Redefining name 'basket' from outer scope (line 6) (redefined-outer-name)
 ************* Module task_three
-Level-3/task_three.py:6:0: C0116: Missing function or method docstring (missing-function-docstring)
-Level-3/task_three.py:6:21: W0621: Redefining name 'receipt_string' from outer scope (line 12) (redefined-outer-name)
-Level-3/task_three.py:6:21: W0613: Unused argument 'receipt_string' (unused-argument)
+Level-3/task_three.py:6:21: W0621: Redefining name 'receipt_string' from outer scope (line 43) (redefined-outer-name)
 
 ------------------------------------------------------------------
-Your code has been rated at 8.17/10 (previous run: 8.17/10, +0.00)
+Your code has been rated at 9.65/10 (previous run: 9.65/10, +0.00)
 
